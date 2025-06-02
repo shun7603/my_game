@@ -12,4 +12,5 @@ class App:
     def draw(self):
         pyxel.cls(pyxel.COLOR_DARK_BLUE)
         pyxel.text(70, 60, "start", pyxel.COLOR_YELLOW)
+
 App()
