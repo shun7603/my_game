@@ -25,6 +25,7 @@ class App:
         pyxel.init(SCREEN_WIDTH, SCREEN_HEIGHT, title="サプーゲーム")
         pyxel.mouse(True)
         pyxel.load("my_resource.pyxres")
+        self.jp_font = pyxel.Font("umplus_j10r.bdf")
         self.current_scene = START_SCENE
         pyxel.run(self.update, self.draw)
         
@@ -83,7 +84,7 @@ class App:
     def draw_start_scene(self):
         pyxel.blt(0, 0, 0, 32, 0, 160, 120)
         pyxel.text(SCREEN_WIDTH // 10, SCREEN_HEIGHT // 10,
-                   "Click to Start", pyxel.COLOR_PINK)
+                   "クリックしてね！", pyxel.COLOR_PINK, self.jp_font)
 
     def draw_play_scene(self):
         pyxel.cls(pyxel.COLOR_DARK_BLUE)
